@@ -1,0 +1,45 @@
+//humidity, pressure and methods mesurmentsChanged(), setMesurment(), getTemperature(), getHumidity(), getPressure()
+
+package javapro;
+
+class weather_station{
+	int temperature,humidity,pressure;
+	weather_station(int temp,int hum,int press){
+		temperature=temp;
+		humidity=hum;
+		pressure=press;
+	}
+	public void measure_change(){
+		System.out.println("Te,perature: "+temperature+"\n Humidity: "+humidity+"\nPressure: "+pressure);
+	}
+	public void getTemperature(){
+		System.out.println("Temperature: "+temperature);
+	}
+	public void getHumidity() {
+		System.out.println("Humidity: "+humidity);
+	}
+	public void getPressure() {
+		System.out.println("Pressure: "+pressure);
+	}
+	public void setMeasurement(int t,int h,int p) {
+		temperature=t;
+		humidity=h;
+		pressure=p;
+		
+		measure_change();
+	}
+}
+
+public class weather {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		weather_station w1=new weather_station(20,7,5);
+		w1.getTemperature();
+		w1.getPressure();
+		w1.getHumidity();
+		w1.setMeasurement(5, 7, 9);
+
+	}
+
+}
